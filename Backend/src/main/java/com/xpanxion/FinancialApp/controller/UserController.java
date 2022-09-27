@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.javaguides.project.repository.CustomerRepository;
+import com.xpanxion.FinancialApp.exception.ResourceNotFoundException;
+import com.xpanxion.FinancialApp.model.User;
+import com.xpanxion.FinancialApp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,8 +19,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import net.javaguides.project.exception.ResourceNotFoundException;
-import net.javaguides.project.model.Customer;
+
 
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -29,7 +30,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
     // get all Users
-    @GetMapping("/items")
+    @GetMapping("/users")
     public List<User> getAllUsers(){
         return userRepository.findAll();
     }
@@ -63,7 +64,7 @@ public class UserController {
 
     // delete user rest api
     @DeleteMapping("/users/{id}")
-    public ResponseEntity<Map<String, Boolean>> deleteItem(@PathVariable Long id){
+    public ResponseEntity<Map<String, Boolean>> deleteUser(@PathVariable Long id){
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User does not exist with id :" + id));
         userRepository.delete(user);
