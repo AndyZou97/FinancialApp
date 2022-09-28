@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Goal } from '../goal';
+import { GoalService } from '../goal.service';
 
 @Component({
   selector: 'app-goal-details',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoalDetailsComponent implements OnInit {
 
-  constructor() { }
+  id!:number
+  goal!:Goal
+
+  constructor(private route:ActivatedRoute, private goalService:GoalService) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params['id']
+    this.goalService.getGoalById(this.id).subscribe(data => {
+      this.goal = data;
+    })
   }
-
 }

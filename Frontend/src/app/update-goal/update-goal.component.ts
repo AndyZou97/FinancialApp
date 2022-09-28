@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Goal } from '../goal';
+import { GoalService } from '../goal.service';
 
 @Component({
   selector: 'app-update-goal',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update-goal.component.css']
 })
 export class UpdateGoalComponent implements OnInit {
-
-  constructor() { }
+  id!:number
+  goal:Goal = new Goal;
+  constructor(private goalService:GoalService,
+    private route:ActivatedRoute,
+    private router:Router) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+    this.goalService.getGoalById(this.id).subscribe(data => {
+      this.goal = data;
+      })
   }
 
+  onSubmit(){
+  this.goalService.updateGoal(this.id,this.goal).subscribe(data =>{
+    this.router.navigate(['/goals'])
+  });
+  }
 }
