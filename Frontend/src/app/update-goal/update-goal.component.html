@@ -1,1 +1,38 @@
-<p>update-goal works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3> Update Goal </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Goal</label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "goal.name" name = "name">
+        </div>
+    
+        <div class="form-group">
+            <label> Cost</label>
+            <input type="text" class ="form-control" id = "cost"
+                [(ngModel)] = "goal.cost" name = "cost">
+        </div>
+    
+        <div class="form-group">
+            <label> Down Payment</label>
+            <input type="text" class ="form-control" id = "downPayment"
+                [(ngModel)] = "goal.downPayment" name = "downPayment">
+        </div>
+
+        <div class="form-group">
+            <label> Months</label>
+            <input type="text" class ="form-control" id = "months"
+                [(ngModel)] = "goal.months" name = "months">
+        </div>
+
+        <div class="form-group">
+            <label> Interest Rate</label>
+            <input type="text" class ="form-control" id = "interest"
+                [(ngModel)] = "goal.interest" name = "interest">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

@@ -1,1 +1,28 @@
-<p>goals works!</p>
+<h2>Goal List </h2>
+<button (click) = "goToAddGoal()" class = "btn btn-info"> Add Goal </button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Goal</th>
+            <th>Cost</th>
+            <th>Months</th>
+            <th>Down Payment</th>
+            <th>Balance</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let goal of goals">
+            <td>{{goal.name}}</td>
+            <td>{{goal.cost}}</td>
+            <td>{{goal.months}}</td>
+            <td>{{goal.downPayment}}</td>
+            <td>{{goal.balance}}</td>
+            <td>
+                <button (click) = "updateGoal(goal.id)" class = "btn btn-info"> Update </button>
+                <button (click) = "deleteGoal(goal.id)" class = "btn btn-danger" style = "margin-left:10px"> Delete </button>
+                <button (click) = "goalDetails(goal.id)" class = "btn btn-success" style = "margin-left:10px">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
