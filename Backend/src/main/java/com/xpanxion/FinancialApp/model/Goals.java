@@ -27,13 +27,16 @@ public class Goals
     @Column(name = "description")
     private String description;
 
+    @Column(name = "monthlyPayment")
+    private double monthlyPayment;
+
 
     public Goals()
     {
 
     }
 
-    public Goals(String name, double cost, double downPayment, double interest, double months, double balance, String description) {
+    public Goals(String name, double cost, double downPayment, double interest, double months, double balance, String description, double monthlyPayment) {
         this.name = name;
         this.cost = cost;
         this.downPayment = downPayment;
@@ -41,6 +44,7 @@ public class Goals
         this.months = months;
         this.balance = balance;
         this.description = description;
+        this.monthlyPayment = monthlyPayment;
     }
 
     public long getId()
@@ -123,5 +127,14 @@ public class Goals
         this.description = description;
     }
 
+    public double getMonthlyPayment()
+    {
+        return monthlyPayment;
+    }
+
+    public void setMonthlyPayment(double monthlyPayment)
+    {
+        this.monthlyPayment = monthlyPayment;
+    }
 
 }
