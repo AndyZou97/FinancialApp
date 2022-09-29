@@ -63,6 +63,7 @@ public class GoalsController
         goals.setMonths(goalsDetails.getMonths());
         goals.setBalance(goalsDetails.getBalance());
         goals.setDescription(goalsDetails.getDescription());
+        goals.setMonthlyPayment(goalsDetails.getMonthlyPayment());
         Goals updatedGoals = goalsRepository.save(goals);
         return ResponseEntity.ok(updatedGoals);
     }
