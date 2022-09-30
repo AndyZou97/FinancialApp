@@ -1,23 +1,27 @@
-<h2>Goal List </h2>
-<button (click) = "goToAddGoal()" class = "btn btn-info"> Add Goal </button>
+<div class = "overlay" ></div>
+<div>
+<h1>Your Goals </h1>
+<br>
+<h6>Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch.</h6>
+<br>
 <table class="table table-striped">
     <thead>
         <tr>
             <th>Goal</th>
             <th>Cost</th>
             <th>Months</th>
-            <th>Down Payment</th>
+            <th>Monthly Payment</th>
             <th>Balance</th>
-            <th>Action</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let goal of goals">
             <td>{{goal.name}}</td>
-            <td>{{goal.cost}}</td>
+            <td>{{'$' + goal.cost}}</td>
             <td>{{goal.months}}</td>
-            <td>{{goal.downPayment}}</td>
-            <td>{{goal.balance}}</td>
+            <td>{{'$' + goal.monthlyPayment}}</td>
+            <td>{{'$' + goal.balance}}</td>
             <td>
                 <button (click) = "updateGoal(goal.id)" class = "btn btn-info"> Update </button>
                 <button (click) = "deleteGoal(goal.id)" class = "btn btn-danger" style = "margin-left:10px"> Delete </button>
@@ -26,3 +30,6 @@
         </tr>
     </tbody>
 </table>
+<button (click) = "goToAddGoal()" class = "btn btn-info addgoal"> Add Goal </button>
+</div>
+<div id ="chart_div"></div>

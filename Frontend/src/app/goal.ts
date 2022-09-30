@@ -9,4 +9,5 @@ export class Goal {
     months!: number;
     balance!: number;
     description!: string;
+    monthlyPayment!: number;
 }
