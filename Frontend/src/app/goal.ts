@@ -1,6 +1,6 @@
 export class Goal {
     
-    goalId!: number;
+    id!: number;
     userId!: number;
     name!: string;
     cost!: number;
@@ -8,4 +8,5 @@ export class Goal {
     interest!: number;
     months!: number;
     balance!: number;
+    description!: string;
 }

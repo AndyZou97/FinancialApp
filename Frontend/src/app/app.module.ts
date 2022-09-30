@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,9 +16,9 @@ import { UpdateGoalComponent } from './update-goal/update-goal.component';
 import { ViewGoalComponent } from './view-goal/view-goal.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
-import { CreateGoalComponent } from './create-goal/create-goal.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { GoalDetailsComponent } from './goal-details/goal-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,14 +36,14 @@ import { GoalDetailsComponent } from './goal-details/goal-details.component';
     ViewGoalComponent,
     CreateUserComponent,
     UpdateUserComponent,
-    CreateGoalComponent,
     UserDetailsComponent,
     GoalDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
