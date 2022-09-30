@@ -32,7 +32,7 @@ export class AddGoalComponent implements OnInit {
   onSubmit(){
     this.calculateBalance();
     this.calculateMonthlyPayment();
-    console.log(this.goal.userId+"TEST");
+    console.log(100+this.goal.monthlyPayment);
     console.log(this.goal);
     this.saveGoal();
 
@@ -41,7 +41,8 @@ export class AddGoalComponent implements OnInit {
     this.goal.balance = this.goal.cost - this.goal.downPayment;
   }
   calculateMonthlyPayment(){
-    this.goal.userId = this.goal.cost * ((this.goal.interest*Math.pow((1+this.goal.interest),this.goal.months))/(Math.pow((1+this.goal.interest),this.goal.months) - 1))
+    this.goal.monthlyPayment = this.goal.cost * ((this.goal.interest/100*Math.pow((1+this.goal.interest/100),this.goal.months))/(Math.pow((1+this.goal.interest/100),this.goal.months) - 1));
+    this.goal.monthlyPayment = parseFloat(this.goal.monthlyPayment.toFixed(2));
   }
 
 
