@@ -1,6 +1,6 @@
 .overlay{
-    opacity:0.5;
-    background-color:#b74e91;
+    opacity:1;
+    background-color:#5e18c0;
     position:fixed;
     width:100%;
     height:100%;
@@ -8,3 +8,96 @@
     left:0px;
     z-index:-1;
 }
+
+h1{
+    color:white;
+    text-align: center; 
+    font-size: 80px;
+    font-family: 'Cairo', sans-serif;
+
+}
+
+.name{
+    color:white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size:26px;
+}
+.email{
+    color:white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size:26px;
+}
+.subject{
+    color:white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size:26px;
+}
+.message{
+    color:white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size:26px;
+}
+
+p{
+    color:white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size:26px;
+}
+h2{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.form-control:valid {
+
+    background-color:#6624C3!important;
+    color:white;
+  }
+  .form-control:focus {
+    border-color: #ffffff;
+    box-shadow: 0px 1px 1px rgba(255, 255, 255, 1) inset, 0px 0px 8px rgba(255, 255, 255, 1.0);
+}
+
+.contactinfo{
+    padding-top: 40%;
+}
+
+.v1 {
+  border-left: 1px solid #ffffff;
+  height: 100%;
+  left: 50%;
+  margin-left: 50%;
+  top: 0;
+}
+
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #6624C3 !important;
+    border-color: #ffffff;
+}
+
+/* .split {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
+    .split > * {
+        width: calc(50% - 2.5em);
+    }
+
+    .split > :nth-child(2n - 1) {
+        padding-right: 2.5em;
+        border-right: solid 1px rgb(0, 252, 76);
+    }
+
+    .split > :nth-child(2n) {
+        padding-left: 2.5em;
+    }
+
+    .split.style1 > :nth-child(2n - 1) {
+        width: calc(66.66666% - 2.5em);
+    }
+
+    .split.style1 > :nth-child(2n) {
+        width: calc(33.33333% - 2.5em);
+    } */
