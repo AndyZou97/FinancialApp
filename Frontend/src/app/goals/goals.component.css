@@ -48,7 +48,10 @@ h1{
     font-family: 'Cairo', sans-serif;
 
 }
+google-chart{
+    margin-left:25%
 
+}
 .addgoal{
     margin-right: 90%;
     font-family: 'Rajdhani', sans-serif;
@@ -58,4 +61,10 @@ h6{
     color:white;
     text-align: center; 
     font-family: 'Rajdhani', sans-serif;
+}
+
+.monthlypayment{
+    margin:0%;
+    padding:0%;
+    border:0%;
 }

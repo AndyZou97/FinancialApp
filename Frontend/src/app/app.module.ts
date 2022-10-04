@@ -19,6 +19,8 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { FormsModule } from '@angular/forms';
+import { GoogleChartsModule } from 'angular-google-charts';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
