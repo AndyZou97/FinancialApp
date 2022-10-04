@@ -41,7 +41,7 @@ h1{
 p{
     color:white;
     font-family: 'Rajdhani', sans-serif;
-    font-size:26px;
+    font-size:20px;
 }
 h2{
     font-family: 'Rajdhani', sans-serif;
@@ -59,6 +59,7 @@ h2{
 
 .contactinfo{
     padding-top: 40%;
+    text-align: left;
 }
 
 .v1 {
