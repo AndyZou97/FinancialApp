@@ -41,7 +41,11 @@ export class AddGoalComponent implements OnInit {
     this.goal.balance = this.goal.cost - this.goal.downPayment;
   }
   calculateMonthlyPayment(){
-    this.goal.monthlyPayment = this.goal.cost * ((this.goal.interest/100*Math.pow((1+this.goal.interest/100),this.goal.months))/(Math.pow((1+this.goal.interest/100),this.goal.months) - 1));
+    if(this.goal.interest > 0) {
+      this.goal.monthlyPayment = this.goal.cost * ((this.goal.interest/100*Math.pow((1+this.goal.interest/100),this.goal.months))/(Math.pow((1+this.goal.interest/100),this.goal.months) - 1));
+    } else {
+      this.goal.monthlyPayment = this.goal.cost/this.goal.months;
+    }
     this.goal.monthlyPayment = parseFloat(this.goal.monthlyPayment.toFixed(2));
   }
 
