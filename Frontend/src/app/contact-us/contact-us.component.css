@@ -20,22 +20,22 @@ h1{
 .name{
     color:white;
     font-family: 'Rajdhani', sans-serif;
-    font-size:26px;
+    font-size:20px;
 }
 .email{
     color:white;
     font-family: 'Rajdhani', sans-serif;
-    font-size:26px;
+    font-size:20px;
 }
 .subject{
     color:white;
     font-family: 'Rajdhani', sans-serif;
-    font-size:26px;
+    font-size:20px;
 }
 .message{
     color:white;
     font-family: 'Rajdhani', sans-serif;
-    font-size:26px;
+    font-size:20px;
 }
 
 p{
@@ -58,7 +58,7 @@ h2{
 }
 
 .contactinfo{
-    padding-top: 40%;
+    padding-top: 20%;
     text-align: left;
 }
 

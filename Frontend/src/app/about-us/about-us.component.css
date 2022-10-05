@@ -43,11 +43,11 @@ body {
     color: white;
     border: white;
     border-style:groove;
-    border-radius: 25px;
+    border-radius: 10px;
   }
 
   .about-section > p {
-    font-size: 26px;
+    font-size: 20px;
   }
   
   .container {

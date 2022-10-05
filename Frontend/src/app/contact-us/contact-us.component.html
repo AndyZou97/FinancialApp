@@ -1,109 +1,122 @@
-<div class = "overlay"></div>
+<div class="overlay"></div>
 <section class="mb-4">
 
     <!--Section heading-->
     <h1 class="h1-responsive font-weight-bold text-center my-4">Contact Us</h1>
     <!--Section description-->
-    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us
+        directly. Our team will come back to you within
         a matter of hours to help you.</p>
 
 
+    <div class="forms">
+        <div class="row">
 
-    <div class="row">
+            <!--Grid column-->
+            <div class="col-md-8 mb-md-0 mb-5">
 
-        <!--Grid column-->
-        <div class="col-md-8 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <form id="contact-form" name="contact-form" action="mailto:example.com?subject" method="GET" target="_blank">
 
+
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <label for="name" class="name">Name</label>
+                                <input type="text" id="name" name="name" class="form-control">
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <label for="email" class="email">Email</label>
+                                <input type="text" id="email" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                    <br>
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <label for="subject" class="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                    <br>
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                <label for="message" class="message">Your Message</label>
+                                <textarea type="text" id="message" name="message" rows="3"
+                                    class="form-control md-textarea"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <br>
+                    <div class="text-left text-md-left">
+                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send Message</a>
+    
+                        <!-- <a href="mailto:email@example.com?subject=">Send Email</a> -->
+                    </div>
+
+
+                </form>
                 
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="name" class="name">Name</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="email" class="email">Email</label>
-                            <input type="text" id="email" name="email" class="form-control">
-                        </div>
-                    </div>
-                    <!--Grid column-->
-            
-                </div>
-                <!--Grid row-->
-                <br>
-                <!--Grid row-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <label for="subject" class="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <!--Grid row-->
-                <br>
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-12">
-
-                        <div class="md-form">
-                            <label for="message" class="message">Your Message</label>
-                            <textarea type="text" id="message" name="message" rows="3" class="form-control md-textarea"></textarea>
-                        </div>
-
-                    </div>
-                </div>
-                <!--Grid row-->
-
-            </form>
-                <br>
-            <div class="text-left text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send Message</a>
+               
+                <div class="status"></div>
             </div>
-            <div class="status"></div>
+            <!--Grid column-->
+
+
+            <div class="col-md-1">
+                <div class="v1"></div>
+
+            </div>
+
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+                <div class="contactinfo">
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                            <p><strong>Address</strong></p>
+                            <p>Malvern, PA 19355 USA</p>
+                        </li>
+
+                        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                            <p><strong>Email</strong></p>
+                            <p>contact@doubloon.com</p>
+                        </li>
+
+                        <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                            <p><strong>Phone</strong></p>
+                            <p>(877) 889-3456</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
-        <!--Grid column-->
 
-        
-        <div class="col-md-1">
-            <div class="v1"></div>
 
-        </div>
 
-        <!--Grid column-->
-        <div class="col-md-3 text-center">
-            <div class="contactinfo">
-            <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p><strong>Address</strong></p>
-                    <p>Malvern, PA 19355 USA</p>
-                </li>
-
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <p>(877) 889-3456</p>
-                </li>
-
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>contact@doubloon.com</p>
-                </li>
-            </ul>
-
-    </div>
-    </div>
-        <!--Grid column-->
-
-        
 
     </div>
 

@@ -48,6 +48,4 @@ export class AddGoalComponent implements OnInit {
     }
     this.goal.monthlyPayment = parseFloat(this.goal.monthlyPayment.toFixed(2));
   }
-
-
 }
