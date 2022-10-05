@@ -32,4 +32,11 @@
 </table>
 <button (click) = "goToAddGoal()" class = "btn btn-info addgoal"> Add Goal </button>
 </div>
-<div id ="chart_div"></div>
+<google-chart #chart
+   [title]="title"
+   [type]="pieChart"
+   [data]="tableData"
+   [options]="options"
+   [width]="width"
+   [height]="height">
+</google-chart>

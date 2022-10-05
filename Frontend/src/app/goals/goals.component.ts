@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ChartType } from 'angular-google-charts';
 import { Goal } from '../goal';
 import { GoalService } from '../goal.service';
 
@@ -13,40 +14,43 @@ declare var google:any;
 export class GoalsComponent implements OnInit {
 
   goals!:Goal[];
+  pieChart = ChartType.PieChart
+  title = 'Monthly Goal Payments';
+  tableData = [
+    ['', 0] 
+ ];
+  options = {
+    pieHole:0.4,
+    backgroundColor:'#003566',  
+    titleTextStyle: {
+      color: 'white', },  
+    legendTextStyle:{
+      color:'white'
+    }
+  };
+  width = 550;
+  height = 400;
 
   constructor(private goalService:GoalService,
     private router:Router) { }
 
   ngOnInit(): void {
-    google.charts.load('current', {packages: ['corechart']});
-    google.charts.setOnLoadCallback(this.drawChart);
     this.getGoals();
   }
 
-  drawChart() {
-
-    // Create the data table.
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Topping');
-    data.addColumn('number', 'Slices');
-    data.addRows([
-      ['Mushrooms', 30],
-      ['Onions', 1],
-      ['Olives', 1], 
-      ['Zucchini', 1],
-      ['Pepperoni', 2]
-    ]);
-    var options = {
-      title: "Monthly Payments",
-      // colors: ["blue","red","yellow"]
-    }
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-  }
 
   private getGoals(){
     this.goalService.getGoalList().subscribe(data => {
-      this.goals = data
+      this.goals = data;
+      this.tableData = [];
+      console.log(this.goals);
+      for (let row in this.goals) {
+        this.tableData.push([
+          this.goals[row].name,
+          this.goals[row].monthlyPayment,
+        ]);
+      }
+      console.log(this.tableData);
     })
   }
 

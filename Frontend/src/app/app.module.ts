@@ -19,7 +19,12 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { FormsModule } from '@angular/forms';
+
 import { AccordionModule } from 'ngx-bootstrap/accordion'
+
+import { GoogleChartsModule } from 'angular-google-charts';
+
+
 
 @NgModule({
   declarations: [
@@ -47,7 +52,11 @@ import { AccordionModule } from 'ngx-bootstrap/accordion'
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+
     AccordionModule
+
+    GoogleChartsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

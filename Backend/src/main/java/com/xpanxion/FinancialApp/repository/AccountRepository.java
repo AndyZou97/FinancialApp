@@ -1,13 +1,11 @@
 package com.xpanxion.FinancialApp.repository;
 
-
-
-import com.xpanxion.FinancialApp.model.User;
+import com.xpanxion.FinancialApp.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long>
+public interface AccountRepository extends JpaRepository<Account, Long>
 {
-    User findUserByUsername(String username);
+
 }
