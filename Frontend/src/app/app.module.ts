@@ -19,6 +19,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { FormsModule } from '@angular/forms';
+import { AccordionModule } from 'ngx-bootstrap/accordion'
 
 @NgModule({
   declarations: [
@@ -37,13 +38,16 @@ import { FormsModule } from '@angular/forms';
     CreateUserComponent,
     UpdateUserComponent,
     UserDetailsComponent,
-    GoalDetailsComponent
+    GoalDetailsComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
