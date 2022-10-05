@@ -40,7 +40,7 @@ public class AuthController
     }
 
 
-    @PostMapping("/login")
+    @PostMapping("/signin")
     public ResponseEntity<User> login(@RequestBody User user) {
         authenticate(user.getUsername(), user.getPassword());
         User loginUser = userRepository.findUserByUsername(user.getUsername());

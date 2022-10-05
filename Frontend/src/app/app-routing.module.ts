@@ -7,6 +7,7 @@ import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { GoalsComponent } from './goals/goals.component';
 import { HomeComponent } from './home/home.component';
 import { LearnMoreComponent } from './learn-more/learn-more.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 import { UpdateGoalComponent } from './update-goal/update-goal.component';
 
 const routes: Routes = [
@@ -18,7 +19,10 @@ const routes: Routes = [
   {path: 'contactus', component: ContactUsComponent},
   {path: 'addgoal', component: AddGoalComponent},
   {path: 'updategoal/:id', component: UpdateGoalComponent},
-  {path: 'goaldetails/:id', component: GoalDetailsComponent}
+  {path: 'goaldetails/:id', component: GoalDetailsComponent},
+  {path: 'signin', component: SignInComponent}
+  
+  
 ];
 
 @NgModule({

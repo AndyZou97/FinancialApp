@@ -1,4 +1,9 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { AuthenticationService } from '../authentication.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,9 +12,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+  private subscriptions: Subscription[] = [];
 
-  ngOnInit(): void {
+  constructor(private router: Router, private authenticationService: AuthenticationService) { }
+
+  ngOnInit(): void
+  {
+    if (this.authenticationService.isUserLoggedIn()) {
+      this.router.navigateByUrl('/goals');
+    } else {
+      this.router.navigateByUrl('/signin');
+    }
   }
 
+
+  public onLogin(user: User)
+  {
+    this.subscriptions.push(
+      this.authenticationService.login(user).subscribe(
+        {
+          next: (response: HttpResponse<User>) => {
+            console.log(response);
+            if (response.body) {
+              this.authenticationService.addUserToLocalCache(response.body);
+            }
+            this.router.navigateByUrl('/goals');
+          },
+          error: err => {
+            console.log(err)
+          }
+        })
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(sub => sub.unsubscribe());
+  }
 }
