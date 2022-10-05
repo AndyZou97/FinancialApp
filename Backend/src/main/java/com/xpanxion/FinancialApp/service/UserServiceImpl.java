@@ -15,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
+
 
 @Service
 @Transactional
@@ -46,5 +46,23 @@ public class UserServiceImpl implements UserDetailsService
             LOGGER.info("returning found user by username: " + username);
             return userPrincipal;
         }
+    }
+
+    public User register(String username, String password, String firstName, String lastName, String email)
+    {
+        User user = new User();
+        user.setPassword( encodePassword(password));
+        user.setUsername(username);
+        user.setRole("ROLE_USER");
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setEmail(email);
+        this.userRepository.save(user);
+        return user;
+    }
+
+    private String encodePassword(String password)
+    {
+        return bCryptPasswordEncoder.encode(password);
     }
 }
