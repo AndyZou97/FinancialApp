@@ -3,17 +3,16 @@ package com.xpanxion.FinancialApp.model;
 
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.List;
 
 @Entity
-
-public class User {
+@Table(name = "users")
+public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String password;
@@ -21,12 +20,17 @@ public class User {
 
     private String firstName;
 
-   private String lastName;
+    private String lastName;
 
     private String email;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Goals> goals;
 
-    public User(Long id, String username, String password, String role, String firstName, String lastName, String email) {
+    public User() {
+    }
+
+    public User(Long id, String username, String password, String role, String firstName, String lastName, String email, List<Goals> goals) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -34,10 +38,8 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.goals = goals;
 
-    }
-
-    public User() {
     }
 
     public Long getId() {
@@ -95,6 +97,12 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+    public List<Goals> getGoals() {
+        return goals;
+    }
 
+    public void setGoals(List<Goals> goals) {
+        this.goals = goals;
+    }
 
 }

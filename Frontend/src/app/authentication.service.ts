@@ -19,13 +19,17 @@ export class AuthenticationService {
     return this.http.post<HttpResponse<any>>(`${this.baseApi}/signin`, user, {observe: 'response'});
   }
 
-  public addUserToLocalCache(user: User): void
-  {
-    localStorage.setItem("user", JSON.stringify(user));
-    localStorage.setItem("username", JSON.stringify(user?.username));
-    localStorage.setItem("id", JSON.stringify(user?.id));
-    localStorage.setItem("role", JSON.stringify(user?.role));
-  }
+   public addUserToLocalCache(user: User): void
+   {
+     localStorage.setItem("user", JSON.stringify(user));
+     localStorage.setItem("username", JSON.stringify(user?.username));
+     localStorage.setItem("id", JSON.stringify(user?.id));
+     localStorage.setItem("role", JSON.stringify(user?.role));
+   }
+
+   public clearCache(): void{
+    localStorage.clear();
+   }
 
   public isUserLoggedIn(): boolean {
     let user = localStorage.getItem("user");

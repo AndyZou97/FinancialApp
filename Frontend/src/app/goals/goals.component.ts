@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChartType } from 'angular-google-charts';
+import { AuthenticationService } from '../authentication.service';
 import { Goal } from '../goal';
 import { GoalService } from '../goal.service';
 
@@ -32,7 +33,7 @@ export class GoalsComponent implements OnInit {
   height = 400;
 
   constructor(private goalService:GoalService,
-    private router:Router) { }
+    private router:Router, private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
     this.getGoals();
@@ -72,6 +73,12 @@ export class GoalsComponent implements OnInit {
 
   goToAddGoal(){
     this.router.navigate(['addgoal'])
+  }
+
+  logout(){
+    this.authenticationService.clearCache();
+    this.router.navigate(['signin'])               
+    
   }
 
 }
