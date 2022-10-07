@@ -1,34 +1,35 @@
 package com.xpanxion.FinancialApp.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "goals")
-public class Goals
+public class Goals implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private long id;
+    private Long id;
 
-    @Column(name = "name")
     private String name;
-    @Column(name = "cost")
     private double cost;
-    @Column(name = "downPayment")
     private double downPayment;
-    @Column(name = "interest")
     private double interest;
-    @Column(name = "months")
     private double months;
-    @Column(name = "balance")
     private double balance;
-    @Column(name = "description")
     private String description;
 
-    @Column(name = "monthlyPayment")
     private double monthlyPayment;
+
+
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
 
     public Goals()
@@ -36,7 +37,7 @@ public class Goals
 
     }
 
-    public Goals(String name, double cost, double downPayment, double interest, double months, double balance, String description, double monthlyPayment) {
+    public Goals(String name, double cost, double downPayment, double interest, double months, double balance, String description, double monthlyPayment, User user) {
         this.name = name;
         this.cost = cost;
         this.downPayment = downPayment;
@@ -45,14 +46,15 @@ public class Goals
         this.balance = balance;
         this.description = description;
         this.monthlyPayment = monthlyPayment;
+        this.user = user;
     }
 
-    public long getId()
+    public Long getId()
     {
         return id;
     }
 
-    public void setId(long id)
+    public void setId(Long id)
     {
         this.id = id;
     }
@@ -136,5 +138,13 @@ public class Goals
     {
         this.monthlyPayment = monthlyPayment;
     }
+    @JsonIgnore
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
+

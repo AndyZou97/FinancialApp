@@ -1,5 +1,6 @@
 package com.xpanxion.FinancialApp.controller;
 
+import com.xpanxion.FinancialApp.model.Goals;
 import com.xpanxion.FinancialApp.model.User;
 import com.xpanxion.FinancialApp.repository.UserRepository;
 import com.xpanxion.FinancialApp.service.UserServiceImpl;
@@ -7,10 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 import static org.springframework.http.HttpStatus.OK;
 
@@ -38,6 +38,20 @@ public class AuthController
     {
         return "Application Works";
     }
+
+    @GetMapping("/users")
+    public List<User> findAll(){
+        return userService.findAll();
+    }
+
+
+//    @GetMapping("/users/{id}/goals")
+//    public List<Goals> getGoalsByUsers(@PathVariable("id") Integer id){
+//        return userService.getGoalsByUser(id);
+//    }
+
+
+
 
 
     @PostMapping("/signin")

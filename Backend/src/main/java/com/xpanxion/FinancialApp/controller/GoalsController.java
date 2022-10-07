@@ -6,7 +6,9 @@ import java.util.Map;
 
 import com.xpanxion.FinancialApp.exception.ResourceNotFoundException;
 import com.xpanxion.FinancialApp.model.Goals;
+import com.xpanxion.FinancialApp.model.User;
 import com.xpanxion.FinancialApp.repository.GoalsRepository;
+import com.xpanxion.FinancialApp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -30,6 +32,9 @@ public class GoalsController
 
     @Autowired
     private GoalsRepository goalsRepository;
+
+    @Autowired
+    private UserRepository userRepository;
     // get all goals
     @GetMapping("/goals")
     public List<Goals> getAllGoals(){
@@ -37,8 +42,10 @@ public class GoalsController
     }
 
     // create goals rest api
-    @PostMapping("/goals")
-    public Goals createGoals(@RequestBody Goals goals) {
+    @PostMapping("/users/{id}/goals")
+    public Goals createGoals(@RequestBody Goals goals, @PathVariable Long id) {
+        User user = this.userRepository.findById(id).get();
+        goals.setUser(user);
         return goalsRepository.save(goals);
     }
 
@@ -51,10 +58,11 @@ public class GoalsController
     }
 
     // update goals rest api
-    @PutMapping("/goals/{id}")
-    public ResponseEntity<Goals> updateGoals(@PathVariable Long id, @RequestBody Goals goalsDetails){
+    @PutMapping("/users/{userId}/goals/{id}")
+    public ResponseEntity<Goals> updateGoals(@PathVariable Long id, @PathVariable Long userId, @RequestBody Goals goalsDetails){
         Goals goals = goalsRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Goals does not exist with id :" + id));
+        User user = userRepository.findById(userId).get();
         goals.setName(goalsDetails.getName());
         goals.setCost(goalsDetails.getCost());
         goals.setDownPayment(goalsDetails.getDownPayment());
@@ -63,7 +71,9 @@ public class GoalsController
         goals.setBalance(goalsDetails.getBalance());
         goals.setDescription(goalsDetails.getDescription());
         goals.setMonthlyPayment(goalsDetails.getMonthlyPayment());
+        goals.setUser(user);
         Goals updatedGoals = goalsRepository.save(goals);
+
         return ResponseEntity.ok(updatedGoals);
     }
 

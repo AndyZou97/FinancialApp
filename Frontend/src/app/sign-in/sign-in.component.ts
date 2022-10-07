@@ -33,9 +33,9 @@ export class SignInComponent implements OnInit {
         {
           next: (response: HttpResponse<User>) => {
             console.log(response);
-            if (response.body) {
-              this.authenticationService.addUserToLocalCache(response.body);
-            }
+             if (response.body) {
+               this.authenticationService.addUserToLocalCache(response.body);
+             }
             this.router.navigateByUrl('/goals');
           },
           error: err => {

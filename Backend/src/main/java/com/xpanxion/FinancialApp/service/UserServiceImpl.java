@@ -1,6 +1,7 @@
 package com.xpanxion.FinancialApp.service;
 
 
+import com.xpanxion.FinancialApp.model.Goals;
 import com.xpanxion.FinancialApp.model.User;
 import com.xpanxion.FinancialApp.model.UserPrincipal;
 import com.xpanxion.FinancialApp.repository.UserRepository;
@@ -15,6 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 
 
 @Service
@@ -25,6 +27,8 @@ public class UserServiceImpl implements UserDetailsService
     private Logger LOGGER = LoggerFactory.getLogger(getClass());
     private UserRepository userRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+
 
 
     @Autowired
@@ -60,6 +64,14 @@ public class UserServiceImpl implements UserDetailsService
         this.userRepository.save(user);
         return user;
     }
+
+    public List<User> findAll(){
+        return (List<User>) userRepository.findAll();
+    }
+
+   // public List<Goals> getGoalsByUser(Integer id){
+    //    return userRepository.getGoalsByUser(id);
+   // }
 
     private String encodePassword(String password)
     {

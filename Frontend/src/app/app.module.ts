@@ -20,7 +20,6 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { FormsModule } from '@angular/forms';
 
-import { AccordionModule } from 'ngx-bootstrap/accordion'
 
 import { GoogleChartsModule } from 'angular-google-charts';
 
@@ -52,9 +51,6 @@ import { GoogleChartsModule } from 'angular-google-charts';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
-    AccordionModule
-
     GoogleChartsModule
 
   ],
