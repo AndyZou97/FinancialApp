@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Goal } from '../goal';
 import { GoalService } from '../goal.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-add-goal',
@@ -9,6 +10,8 @@ import { GoalService } from '../goal.service';
   styleUrls: ['./add-goal.component.css']
 })
 export class AddGoalComponent implements OnInit {
+  user: User = new User();
+
 
   goal: Goal = new Goal();
   constructor(private goalService: GoalService,
@@ -18,7 +21,7 @@ export class AddGoalComponent implements OnInit {
   }
 
   saveGoal(){
-    this.goalService.createGoal(this.goal).subscribe( data =>{
+    this.goalService.createGoal(this.user.id,this.goal).subscribe( data =>{
       console.log(data);
       this.goToGoalList();
     },
@@ -32,8 +35,6 @@ export class AddGoalComponent implements OnInit {
   onSubmit(){
     this.calculateBalance();
     this.calculateMonthlyPayment();
-    console.log(100+this.goal.monthlyPayment);
-    console.log(this.goal);
     this.saveGoal();
 
   }
