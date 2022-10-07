@@ -13,8 +13,9 @@ export class GoalService {
   getGoalList(): Observable<Goal[]>{
     return this.httpClient.get<Goal[]>("http://localhost:8080/api/v1/goals");
   }
-  createGoal(Goal:Goal):Observable<any>{
-    return this.httpClient.post("http://localhost:8080/api/v1/goals",Goal);
+  createGoal(id:number, Goal:Goal):Observable<any>{
+    console.log(id);
+    return this.httpClient.post("http://localhost:8080/api/v1/users/" + "1"+ "/goals",Goal);
   }
   getGoalById(id:number): Observable<Goal>{
     return this.httpClient.get<Goal>("http://localhost:8080/api/v1/goals/"+id)
