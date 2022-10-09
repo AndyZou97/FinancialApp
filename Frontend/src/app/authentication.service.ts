@@ -3,6 +3,7 @@ import {HttpClient, HttpClientModule, HttpResponse} from "@angular/common/http";
 import { User } from './user';
 import {Observable} from "rxjs";
 import { environment } from 'src/environments/environment';
+import { GoalService } from './goal.service';
 
 
 @Injectable({
@@ -12,7 +13,7 @@ export class AuthenticationService {
 
   baseApi: string = environment.apiBaseUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private goalService: GoalService) { }
 
   public login(user: User): Observable<HttpResponse<any>>
   {

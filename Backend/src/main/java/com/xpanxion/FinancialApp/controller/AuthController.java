@@ -1,5 +1,6 @@
 package com.xpanxion.FinancialApp.controller;
 
+import com.xpanxion.FinancialApp.exception.ResourceNotFoundException;
 import com.xpanxion.FinancialApp.model.Goals;
 import com.xpanxion.FinancialApp.model.User;
 import com.xpanxion.FinancialApp.repository.UserRepository;
@@ -44,14 +45,12 @@ public class AuthController
         return userService.findAll();
     }
 
-
-//    @GetMapping("/users/{id}/goals")
-//    public List<Goals> getGoalsByUsers(@PathVariable("id") Integer id){
-//        return userService.getGoalsByUser(id);
-//    }
-
-
-
+    @GetMapping("/users/{id}")
+    public List<Goals> getUsersById(@PathVariable Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Goals does not exist with id :" + id));
+        return user.getGoals();
+    }
 
 
     @PostMapping("/signin")

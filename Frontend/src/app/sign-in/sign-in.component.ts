@@ -14,6 +14,8 @@ export class SignInComponent implements OnInit {
 
   private subscriptions: Subscription[] = [];
 
+
+
   constructor(private router: Router, private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void
@@ -27,12 +29,14 @@ export class SignInComponent implements OnInit {
 
 
   public onLogin(user: User)
+
   {
     this.subscriptions.push(
       this.authenticationService.login(user).subscribe(
         {
           next: (response: HttpResponse<User>) => {
             console.log(response);
+            console.log(user);
              if (response.body) {
                this.authenticationService.addUserToLocalCache(response.body);
              }
