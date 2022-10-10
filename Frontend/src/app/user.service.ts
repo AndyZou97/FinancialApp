@@ -14,7 +14,7 @@ export class UserService {
     return this.httpClient.get<User[]>("http://localhost:8080/api/v1/users");
   }
   createUser(User:User):Observable<any>{
-    return this.httpClient.post("http://localhost:8080/api/v1/users",User);
+    return this.httpClient.post("http://localhost:8080/register",User);
   }
   getUserById(id:number): Observable<User>{
     return this.httpClient.get<User>("http://localhost:8080/api/v1/users/"+id)
