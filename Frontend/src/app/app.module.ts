@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { GoogleChartsModule } from 'angular-google-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -51,7 +52,8 @@ import { GoogleChartsModule } from 'angular-google-charts';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
