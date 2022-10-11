@@ -1,8 +1,7 @@
 <div class = "overlay" ></div>
 <div>
-<h1>Your Goals </h1>
+<h1>{{this.firstName}} Goals </h1>
 <br>
-<h6>Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch. Add your goals bitch.</h6>
 <br>
 <table class="table table-striped">
     <thead>
@@ -25,13 +24,16 @@
             <td>
                 <button (click) = "updateGoal(goal.id)" class = "btn btn-info"> Update </button>
                 <button (click) = "deleteGoal(goal.id)" class = "btn btn-danger" style = "margin-left:10px"> Delete </button>
-                <button (click) = "goalDetails(goal.id)" class = "btn btn-success" style = "margin-left:10px">View</button>
+                <button (click) = "goalDetails(goal.id)" class = "btn btn-secondary" style = "margin-left:10px">View</button>
+                <button (click) = "completeGoal(goal.id)" class = "btn btn-success" style = "margin-left:10px"> Complete </button>
+
             </td>
         </tr>
     </tbody>
 </table>
-<button (click) = "goToAddGoal()" class = "btn btn-info addgoal"> Add Goal </button>
 </div>
+<p> Total Monthly Payment: ${{this.totalMonthlyPayment}}</p> 
+<button (click) = "goToAddGoal()" class = "btn btn-info addgoal"> Add Goal </button>
 <google-chart #chart
    [title]="title"
    [type]="pieChart"

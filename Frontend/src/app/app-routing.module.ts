@@ -11,6 +11,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { UpdateGoalComponent } from './update-goal/update-goal.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { CongratulationsComponent } from './congratulations/congratulations.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'goaldetails/:id', component: GoalDetailsComponent},
   {path: 'signin', component: SignInComponent},
   {path: 'signup', component: SignUpComponent},
-  {path: 'updateuser/:id', component: UpdateUserComponent}
+  {path: 'updateuser/:id', component: UpdateUserComponent},
+  {path: 'congratulations', component: CongratulationsComponent}
   
   
 ];
