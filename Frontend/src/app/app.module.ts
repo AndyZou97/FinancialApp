@@ -21,7 +21,11 @@ import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { FormsModule } from '@angular/forms';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatSliderModule } from '@angular/material/slider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -52,7 +56,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     FormsModule,
     GoogleChartsModule,
-
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatButtonModule
 
   ],
   providers: [],
