@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {MatAccordion} from '@angular/material/expansion';
 
 
 @Component({
@@ -7,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./learn-more.component.css']
 })
 export class LearnMoreComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+
+
+  @ViewChild(MatAccordion)
+  accordion: MatAccordion = new MatAccordion;
+
+  
 
 }

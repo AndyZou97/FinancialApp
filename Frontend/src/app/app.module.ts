@@ -19,9 +19,9 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { FormsModule } from '@angular/forms';
-
-
 import { GoogleChartsModule } from 'angular-google-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -51,7 +51,8 @@ import { GoogleChartsModule } from 'angular-google-charts';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+
 
   ],
   providers: [],

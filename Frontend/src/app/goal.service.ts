@@ -18,7 +18,6 @@ export class GoalService {
   }
   createGoal(id:number, Goal:Goal):Observable<any>{
     var currentUser = window.localStorage.getItem('id');
-    console.log("Made goal for user " + currentUser);
     return this.httpClient.post("http://localhost:8080/api/v1/users/" + currentUser + "/goals",Goal);
   }
   getGoalById(id:number): Observable<Goal>{

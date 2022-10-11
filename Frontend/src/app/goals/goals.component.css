@@ -48,6 +48,22 @@ h1{
     font-family: 'Cairo', sans-serif;
 
 }
+
+h2{
+    color:white;
+    margin-left:0%; 
+    font-size: 24px;
+    font-family: 'Cairo', sans-serif;
+
+}
+
+p{
+    color:white;
+    text-align: center; 
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+
+}
 google-chart{
     margin-left:25%
 
