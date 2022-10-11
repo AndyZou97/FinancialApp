@@ -26,6 +26,7 @@ export class AuthenticationService {
      localStorage.setItem("username", JSON.stringify(user?.username));
      localStorage.setItem("id", JSON.stringify(user?.id));
      localStorage.setItem("role", JSON.stringify(user?.role));
+     localStorage.setItem("firstname", (user?.firstName));
    }
 
    public clearCache(): void{

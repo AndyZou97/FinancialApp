@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/FinancialApp.iml" filepath="$PROJECT_DIR$/.idea/FinancialApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Backend/NewSpringSecurityProject.iml" filepath="$PROJECT_DIR$/Backend/NewSpringSecurityProject.iml" />
     </modules>
   </component>
 </project>
