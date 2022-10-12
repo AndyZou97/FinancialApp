@@ -1,23 +1,41 @@
-<div class="example-action-buttons">
-  <button mat-flat-button color="accent" (click)="accordion.openAll()">Expand All</button>
-  <button mat-flat-button color="accent" (click)="accordion.closeAll()">Collapse All</button>
+<div class="overlay"></div>
+
+<div class="head">
+<h1 class="h1-responsive font-weight-bold text-center my-4"><img src="assets\green pirate parrot.png" alt="">Learn More<img src="assets\green pirate parrot flipped.png" alt=""></h1>
+</div>
+<div class="intro">
+  <p class="text-center w-responsive mx-auto mb-5">At Doubloon we believe everyone should have access to finacial
+    resources so they can become financially literate and well versed in their budgeting. Please take some time to read
+    through some of our resources so you may too become wiser on your wallet.
+  </p>
 </div>
 
 
-<mat-accordion class="example-headers-align" multi>
+<div class="action-buttons">
+  <button mat-stroked-button color="accent" (click)="accordion.openAll()">Expand All</button>
+  <button mat-stroked-button color="accent" (click)="accordion.closeAll()">Collapse All</button>
+</div>
+
+
+<mat-accordion class="headers-align" multi>
 
   <!-- Accordion -->
   <mat-expansion-panel>
+
     <mat-expansion-panel-header>
+
       <mat-panel-title>
-        My Finances
+        What is a budget?
       </mat-panel-title>
-      <mat-panel-description>
-        Learn More
-        <mat-icon>account_circle</mat-icon>
-      </mat-panel-description>
+
+      <!-- <mat-panel-description> -->
+      <mat-icon>attach_money</mat-icon>
+      <!-- </mat-panel-description> -->
+
     </mat-expansion-panel-header>
-    <p>This is the primary content of the panel.</p>
+    <br>
+    <p>A budget is a spending plan based on income and expenses. In other words, it’s an estimate of how much money
+      you’ll make and spend over a certain period of time, such as a month or year. </p>
   </mat-expansion-panel>
   <!-- Accordion -->
 
@@ -25,14 +43,38 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        My Finances
+        Why is budgeting important?
       </mat-panel-title>
-      <mat-panel-description>
-        Learn More
-        <mat-icon>account_circle</mat-icon>
-      </mat-panel-description>
+      <!-- <mat-panel-description> -->
+      <mat-icon>star</mat-icon>
+      <!-- </mat-panel-description> -->
     </mat-expansion-panel-header>
-    <p>This is the primary content of the panel.</p>
+    <br>
+    <p>Budgeting benefits everyone, not just those who struggle financially. It encourages you to live within your
+      means and put your money to work in the best way possible. Think of a budget as a steppingstone to your
+      financial goals. It can help you:</p>
+
+    <ul>
+      <li>
+        Understand your relationship with money. Tracking your income and expenses paints a clear picture of how much
+        you have to save or spend. Once you spot patterns, you can identify where to make adjustments.
+        Maybe you spend less than you earn (way to go!) but you’re paying for that subscription beauty box that you no
+        longer need.
+      </li>
+      <li>
+        Save enough for the future. A good budget coaxes you to earmark money for an emergency fund and savings goals
+        like a vacation or retirement. Here's how to work out how much you should save each month.
+      </li>
+      <li>
+        Get — or stay — out of debt. Mapping out expenses in advance reduces the risk of overspending and can
+        help you pay off debt you already have.
+      </li>
+      <li>
+        Relieve stress. Budgeting isn’t a cure-all, but it can help you manage financial decisions and prepare for
+        challenges.
+      </li>
+    </ul>
+
   </mat-expansion-panel>
   <!-- Accordion -->
 
@@ -40,14 +82,58 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        My Finances
+        How to get started on your personal budget?
       </mat-panel-title>
-      <mat-panel-description>
-        Learn More
-        <mat-icon>account_circle</mat-icon>
-      </mat-panel-description>
+
+
+      <!-- <mat-panel-description> -->
+      <mat-icon>account_circle</mat-icon>
+      <!-- </mat-panel-description> -->
+
+
     </mat-expansion-panel-header>
-    <p>This is the primary content of the panel.</p>
+    <br>
+    <p>The specifics of your budget will depend on your personal financial situation and goals. In most cases, though,
+      the steps for creating a budget are the same. You can make a budget by following seven simple steps.</p>
+
+    <ol>
+      <li>
+        Add up your total income. This should include all sources, such as a paycheck, tips, Social Security,
+        disability, alimony, or investment income.
+      </li>
+      <li>
+        Track your spending. Spend a month keeping track of everything you spend, whether you pay with a credit card or
+        cash,
+        to find what your real expenses are. Be sure to include automatic payments, subscriptions, and utilities.
+      </li>
+      <li>
+        Set financial goals. Do you want to save money? Pay off debt? Stop overspending? Decide on realistic goals.
+        Remember, you can adjust these over time. Pick the most pressing goals, such as paying off debt or creating an
+        emergency fund, first.
+      </li>
+      <li>
+        Calculate mandatory expenses. These are expenses you must pay each month, such as rent, insurance premiums,
+        taxes, childcare,
+        or your cell phone bill. Subtract these from your total income.
+      </li>
+      <li>
+        Identify debt payments. If you are paying off debt, such as student loans or a credit card bill, find the
+        minimum
+        payment for each debt. Subtract that from your income as well.
+      </li>
+      <li>
+        Make a spending plan. The amount of income you have left is what you can spend on discretionary expenses. These
+        can include your goals,
+        such as debt payment or savings. It should also include things like groceries, entertainment, gas, or surprise
+        expenses.
+        Give every dollar a job, based on your goals and what you discovered when you tracked your spending.
+      </li>
+      <li>
+        Adjust each month. Each month, look at your spending and goals, Reevaluate and adjust where you assign your
+        discretionary spending. A flexible budget will help you avoid overspending.
+      </li>
+    </ol>
+
   </mat-expansion-panel>
   <!-- Accordion -->
 
@@ -57,14 +143,13 @@
       <mat-panel-title>
         What's an emergency fund?
       </mat-panel-title>
-      <mat-panel-description>
-        Learn More
-        <mat-icon>battery_alert</mat-icon>
-      </mat-panel-description>
+      <!-- <mat-panel-description> -->
+      <mat-icon>battery_alert</mat-icon>
+      <!-- </mat-panel-description> -->
     </mat-expansion-panel-header>
+    <br>
     <p>An emergency fund is not a specific type of bank account but can be any source of cash that you’ve saved to help
-      you
-      handle financial hardships like job losses, medical bills, or car repairs. How they work:</p>
+      you handle financial hardships like job losses, medical bills, or car repairs. How they work:</p>
 
     <ul>
       <li>
@@ -81,6 +166,100 @@
   </mat-expansion-panel>
   <!-- Accordion -->
 
+  <!-- Accordion -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Static vs. flexible budgets
+      </mat-panel-title>
+      <!-- <mat-panel-description> -->
+      <mat-icon>compare_arrows</mat-icon>
+      <!-- </mat-panel-description> -->
+    </mat-expansion-panel-header>
+    <br>
+    <p>There are two major types of budgets: static budgets and flexible budgets. A static budget remains unchanged over
+      the life of the budget.
+      Regardless of changes that occur during the budgeting period, all accounts and figures originally calculated
+      remain the same.</p>
+    <p>A flexible budget has a relational value to certain variables. The dollar amounts listed on a flexible budget
+      change based on sales levels,
+      production levels, or other external economic factors.</p>
+    <p>Both types of budgets are useful for management. A static budget evaluates the effectiveness of the original
+      budgeting process,
+      while a flexible budget provides deeper insight into business operations.</p>
+  </mat-expansion-panel>
+  <!-- Accordion -->
+
+  <!-- Accordion -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is finacial literacy?
+      </mat-panel-title>
+      <!-- <mat-panel-description> -->
+      <mat-icon>question_answer</mat-icon>
+      <!-- </mat-panel-description> -->
+    </mat-expansion-panel-header>
+    <br>
+    <p>Financial literacy is the ability to understand and effectively use various financial skills, including personal
+      financial management,
+      budgeting, and investing. The meaning of financial literacy is the foundation of your relationship with money, and
+      it is a lifelong journey of learning.
+      The earlier you start, the better off you will be because education is the key to success when it comes to money.
+    </p>
+  </mat-expansion-panel>
+  <!-- Accordion -->
+
+  <!-- Accordion -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Benefits of financial literacy
+      </mat-panel-title>
+      <!-- <mat-panel-description> -->
+      <mat-icon>thumb_up</mat-icon>
+      <!-- </mat-panel-description> -->
+    </mat-expansion-panel-header>
+    <br>
+    <p>Holistically, the benefit of financial literacy is to empower individuals to make smarter decisions. More
+      specifically, financial literacy is important for a
+      number of reasons:</p>
+
+    <ul>
+      <li>
+        Financial literacy can prevent devastating mistakes. Floating rate loans may have different interest rates each
+        month, while traditional IRA contributions
+        can't be withdrawn until retirement. Seemingly innocent financial decisions may have long-term implications that
+        cost individuals money or impact life plans.
+        Financial literacy helps individuals avoid making mistakes with their personal finances.
+      </li>
+      <li>
+        Financial literacy prepares people for emergencies. Financial literacy topics such as saving or emergency
+        preparedness get individuals ready for the uncertain.
+        Though losing a job or having a major unexpected expense are always financially impactful, an individual can
+        cushion the blow by implementing their financial
+        literacy in advance by being ready for emergencies.
+      </li>
+      <li>
+        Financial literacy can help individual reach their goals. By better understanding how to budget and save money,
+        individuals can create plans that set expectations,
+        hold them accountable to their finances, and sets a course for achieving seemingly unachievable goals.
+        Though someone may not be able to afford a dream today, they can always make a plan to better increase their
+        odds of making it happen.
+      </li>
+      <li>
+        Financial literacy invokes confidence. Imagine making a life-changing decision without all the information you
+        need to make the best decision.
+        By being armed with the appropriate knowledge about finances, individuals can approach major life choices with
+        greater confidence realizing they are less l
+        ikely to be surprised or negatively impacted by unforeseen outcomes.
+      </li>
+    </ul>
+
+  </mat-expansion-panel>
+  <!-- Accordion -->
+
 
 </mat-accordion>
-
+<br>
+<img src="assets\pngfind.com-parrot-clipart-png-6116127.png">
