@@ -11,6 +11,7 @@
 
 .action-buttons {
     padding-bottom: 20px;
+    
 }
 
 button {
@@ -23,33 +24,40 @@ button {
 .headers-align .mat-expansion-panel-header-description {
     justify-content: right;
     align-items: right;
+    
 }
 
 .example-headers-align .mat-form-field+.mat-form-field {
     margin-left: 8px;
+    
+    
 }
 
 mat-expansion-panel {
-    background-color: rgb(235, 186, 53);
+    background-color: rgb(47, 93, 245);
     padding: 5px;
-    background-image: linear-gradient(to bottom right, rgb(255, 203, 61), rgb(223, 171, 0));
+    background-image: linear-gradient(to bottom right, rgb(241, 186, 35), rgb(202, 146, 24));
+    
 }
 
 mat-panel-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     font-family: 'Rajdhani', sans-serif;
     margin: 0px 10px 10px 0px;
+    color: black;
 }
 
 mat-icon {
     margin: 15px 10px 0px 0px;
+    color: black;
 }
 
 p {
     font-size: 18px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
+    color: black;
 }
 
 .intro {
@@ -63,12 +71,14 @@ ul {
     font-size: 16px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
+    color: black;
 }
 
 ol {
     font-size: 16px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
+    color: black;
 }
 
 h1 {
