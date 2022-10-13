@@ -1,3 +1,36 @@
-<div class = "overlay"></div>
-<h1>congratulations on completing your goal! Click the button below to return to your goals </h1>
-<button (click) = "goToGoals()" class = "btn btn-success" style = "margin-left:10px"> Return </button>
+
+
+	
+<div class="contain">
+	<div class="congrats">
+		<h1>Congratulations!</h1>
+		<div class="done">
+			<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+<path class="circ path" style="fill:#080808;stroke:#0c0c0c;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"
+	/>
+<polyline class="tick path" style="fill:none;stroke:#fff;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+	11.6,20 15.9,24.2 26.4,13.8 "/>
+</svg>
+			</div>
+		<div class="text">
+		<p>You have successfully completed your goal! <br>We hope to see you back here soon<br>Date:Best day ever<br>
+			Time: <br>
+	
+		</p>
+			<p>Regards, Doubloon
+			</p>
+			</div>
+		<p class="regards">Spam the check box below before you return to your goals</p>
+
+		<input style="width: 50px;height:50px;" type="checkbox" (click)="showconfetti($event.target)">
+		<button (click) = "goToGoals()" class = "btn btn-success" style = "margin-left:10px"> Return </button>
+	</div>
+</div>
+		 
+		
+		
+
+
+
