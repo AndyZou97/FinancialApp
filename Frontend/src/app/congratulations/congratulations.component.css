@@ -1,149 +1,199 @@
-
-
-body{
-	width:100%;
-	height:100%;
-	
-}
-.contain{
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-
-	
+.overlay {
+	opacity: 1.0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+	background-color: #003566;
 }
 
-.done{
-	width:100px;
-	height:100px;
-	position:relative;
+.contain {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.done {
+	width: 100px;
+	height: 100px;
+	position: relative;
 	left: 0;
 	right: 0;
-	top:-20px;
-	margin:auto;
-}
-.contain h1{
-	font-family: 'Julius Sans One', sans-serif;
-	font-size:1.4em;
-	color: #8d1010;
+	top: -20px;
+	margin: auto;
 }
 
-.congrats{
-	position:relative;
-	left:50%;
-	top:50%;
-	max-width:800px;	transform:translate(-50%,-50%);
-	width:80%;
-	min-height:300px;
-	max-height:900px;
-	border:2px solid rgb(252, 252, 252);
-	border-radius:5px;
-	    box-shadow: 19px 19px 29px 0 rgba(46,61,73,.3);
-    background-image: linear-gradient(to bottom right,#02b3e4,#02ccba);
-	background:rgb(255, 254, 254);
-	text-align:center;
-	font-size:2em;
+.contain h1 {
+	font-size: 2em;
+	color: #8d1010;
+	font-family: 'Cairo', sans-serif;
+	font-weight: bold;
+
+}
+
+.congrats {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	max-width: 800px;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	min-height: 300px;
+	max-height: 900px;
+	border: 2px solid rgb(252, 252, 252);
+	border-radius: 5px;
+	box-shadow: 19px 19px 29px 0 rgba(46, 61, 73, .3);
+	background-image: linear-gradient(to bottom right, #02b3e4, #02ccba);
+	background: rgb(255, 254, 254);
+	text-align: center;
+	font-size: 2em;
 	font-style: serif;
 	color: #13c0c0;
 }
 
-.text{
-	position:relative;
-	font-weight:normal;
-	left:0;
-	right:0;
-	margin:auto;
-	width:80%;
-	max-width:800px;
+.text {
+	position: relative;
+	font-weight: normal;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 80%;
+	max-width: 800px;
 
 	font-family: 'Lato', sans-serif;
-	font-size:20px;
+	font-size: 20px;
 
 }
 
 
-.circ{
-    opacity: 0;
-    stroke-dasharray: 130;
-    stroke-dashoffset: 130;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
-}
-.tick{
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
-    -webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
-    -moz-transition: stroke-dashoffset 1s 0.5s ease-out;
-    -ms-transition: stroke-dashoffset 1s 0.5s ease-out;
-    -o-transition: stroke-dashoffset 1s 0.5s ease-out;
-    transition: stroke-dashoffset 1s 0.5s ease-out;
-}
-.drawn svg .path{
-    opacity: 1;
-    stroke-dashoffset: 0;
+.circ {
+	opacity: 0;
+	stroke-dasharray: 130;
+	stroke-dashoffset: 130;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
 }
 
-.regards{
-	font-size:.7em;
+.tick {
+	stroke-dasharray: 50;
+	stroke-dashoffset: 50;
+	-webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
+	-moz-transition: stroke-dashoffset 1s 0.5s ease-out;
+	-ms-transition: stroke-dashoffset 1s 0.5s ease-out;
+	-o-transition: stroke-dashoffset 1s 0.5s ease-out;
+	transition: stroke-dashoffset 1s 0.5s ease-out;
+}
+
+.drawn svg .path {
+	opacity: 1;
+	stroke-dashoffset: 0;
+}
+
+.regards {
+	font-size: .7em;
+}
+
+h1 {
+	margin: 30px 0px 50px 0px;
+	font-size: 48px;
+}
+
+p {
+	font-family: 'Rajdhani', sans-serif;
+	color: black;
+	font-weight: bold;
+}
+
+button {
+	margin: 10px;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+}
+
+.confettiButton {
+	display: flex;
+	justify-content: center;
+}
+
+.confettiButton img {
+	transition: 1s ease;
+}
+
+.confettiButton img:hover {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+
+img {
+	width: 100px;
+	height: auto;
+
 }
 
 
-@media (max-width:600px){
-	.congrats h1{
-		font-size:1.2em;
+@media (max-width:600px) {
+	.congrats h1 {
+		font-size: 1.2em;
 	}
-	
-	.done{
-		top:-10px;
-		width:80px;
-		height:80px;
+
+	.done {
+		top: -10px;
+		width: 80px;
+		height: 80px;
 	}
-	.text{
-		font-size:0.5em;
+
+	.text {
+		font-size: 0.5em;
 	}
-	.regards{
-		font-size:0.6em;
+
+	.regards {
+		font-size: 0.6em;
 	}
 }
 
-@media (max-width:500px){
-	.congrats h1{
-		font-size:1em;
+@media (max-width:500px) {
+	.congrats h1 {
+		font-size: 1em;
 	}
-	
-	.done{
-		top:-10px;
-		width:70px;
-		height:70px;
+
+	.done {
+		top: -10px;
+		width: 70px;
+		height: 70px;
 	}
-	
+
 }
 
-@media (max-width:410px){
-	.congrats h1{
-		font-size:1em;
+@media (max-width:410px) {
+	.congrats h1 {
+		font-size: 1em;
 	}
-	
-	.congrats .hide{
-		display:none;
+
+	.congrats .hide {
+		display: none;
 	}
-	
-	.congrats{
-		width:100%;
+
+	.congrats {
+		width: 100%;
 	}
-	
-	.done{
-		top:-10px;
-		width:50px;
-		height:50px;
+
+	.done {
+		top: -10px;
+		width: 50px;
+		height: 50px;
 	}
-	.regards{
-		font-size:0.55em;
+
+	.regards {
+		font-size: 0.55em;
 	}
-	
+
 }

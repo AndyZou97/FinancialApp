@@ -14,7 +14,9 @@ export class CongratulationsComponent implements OnInit {
 
   constructor(private router: Router) { }
   
-
+  date = new Date();
+  dateWeWant = this.date.getMonth() + 1 + "/" + this.date.getDate() + "/" + this.date.getFullYear();
+  // time = this.date.getHours() + ":" + this.date.getMinutes();
 
   ngOnInit(): void {
   }
@@ -30,4 +32,6 @@ export class CongratulationsComponent implements OnInit {
   }
 
 
+
 }
+ 
