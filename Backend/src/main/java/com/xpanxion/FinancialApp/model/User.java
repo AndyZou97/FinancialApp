@@ -3,10 +3,12 @@ package com.xpanxion.FinancialApp.model;
 
 
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Entity
 @Table(name = "users")
 public class User implements Serializable {

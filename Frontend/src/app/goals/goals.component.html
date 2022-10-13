@@ -33,11 +33,21 @@
 </table>
 </div>
 <p> Total Monthly Payment: ${{this.totalMonthlyPayment}}</p> 
+<p> Total Balance: ${{this.totalBalance}}</p> 
 <button (click) = "goToAddGoal()" class = "btn btn-info addgoal"> Add Goal </button>
 <google-chart #chart
-   [title]="title"
+   [title]="title1"
    [type]="pieChart"
-   [data]="tableData"
+   [data]="tableData1"
+   [options]="options"
+   [width]="width"
+   [height]="height">
+</google-chart>
+
+<google-chart #chart
+   [title]="title2"
+   [type]="pieChart"
+   [data]="tableData2"
    [options]="options"
    [width]="width"
    [height]="height">

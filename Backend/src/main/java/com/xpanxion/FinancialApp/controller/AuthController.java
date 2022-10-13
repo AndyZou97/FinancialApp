@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.OK;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class AuthController
 {
@@ -69,6 +69,12 @@ public class AuthController
 
     private void authenticate(String username, String password) {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+    }
+    @PutMapping("/users/{userId}")
+    public User updateUser(@PathVariable Long userId, @RequestBody User userDetails){
+
+
+        return userService.update(userId,userDetails);
     }
 }
 

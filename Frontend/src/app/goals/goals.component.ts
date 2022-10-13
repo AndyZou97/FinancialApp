@@ -17,10 +17,10 @@ export class GoalsComponent implements OnInit {
   firstName = (localStorage.getItem("firstname")!) + "'s";
   goals!:Goal[];
   pieChart = ChartType.PieChart
-  title = 'Monthly Goal Payments';
-  tableData = [
-    ['', 0] 
- ];
+  title1 = 'Monthly Goal Payments';
+  title2 = 'Balance';
+  tableData1 = [['', 0]];
+  tableData2 = [['', 0]];
   options = {
     pieHole:0.4,
     backgroundColor:'#003566',  
@@ -30,9 +30,10 @@ export class GoalsComponent implements OnInit {
       color:'white'
     }
   };
-  width = 550;
-  height = 400;
+  width = 475;
+  height = 300;
   totalMonthlyPayment = 0;
+  totalBalance = 0;
 
 
   constructor(private goalService:GoalService,
@@ -51,17 +52,23 @@ export class GoalsComponent implements OnInit {
   private getGoals(){
     this.goalService.getGoalList().subscribe(data => {
       this.goals = data;
-      this.tableData = [];
+      this.tableData1 = [];
+      this.tableData2 = [];
       this.totalMonthlyPayment = 0;
+      this.totalBalance = 0;
       for (let row in this.goals) {
-        this.tableData.push([
+        this.tableData1.push([
           this.goals[row].name,
           this.goals[row].monthlyPayment,
         ]);
+        this.tableData2.push([
+          this.goals[row].name,
+          this.goals[row].balance,
+        ]);
         this.totalMonthlyPayment += this.goals[row].monthlyPayment;
+        this.totalBalance += this.goals[row].balance;
 
       }
-      console.log(this.tableData);
     })
   }
 

@@ -9,6 +9,13 @@
     background-color:#003566;
 }
 
+google-chart{
+    display:inline-block;
+    padding: 0%;
+    margin: 0%;
+    border-color: red;
+
+}
 .table-striped tbody td:nth-of-type(even) {
     /* background-color: red; */
     color:white;
@@ -64,10 +71,7 @@ p{
     font-family: 'Cairo', sans-serif;
 
 }
-google-chart{
-    margin-left:25%
 
-}
 .addgoal{
     margin-right: 90%;
     font-family: 'Rajdhani', sans-serif;
