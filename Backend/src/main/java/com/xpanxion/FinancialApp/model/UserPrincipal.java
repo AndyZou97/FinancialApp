@@ -2,11 +2,12 @@ package com.xpanxion.FinancialApp.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.Collection;
 
 import static java.util.Arrays.stream;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UserPrincipal implements UserDetails {
 
     private User user;

@@ -32,6 +32,7 @@ export class UpdateGoalComponent implements OnInit {
 
   calculateBalance(){
     this.goal.balance = this.goal.cost - this.goal.downPayment;
+    this.goal.balance = parseFloat(this.goal.balance.toFixed(2));
   }
   calculateMonthlyPayment(){
     if(this.goal.interest > 0) {

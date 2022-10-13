@@ -15,6 +15,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -63,6 +65,18 @@ public class UserServiceImpl implements UserDetailsService
         user.setEmail(email);
         this.userRepository.save(user);
         return user;
+    }
+
+    public User update(@PathVariable Long userId, @RequestBody User userDetails)
+    {
+        User user = userRepository.findById(userId).get();
+        user.setFirstName(userDetails.getFirstName());
+        user.setLastName(userDetails.getLastName());
+        user.setEmail(userDetails.getEmail());
+        user.setPassword(encodePassword(userDetails.getPassword()));
+        user.setUsername(userDetails.getUsername());
+        User updatedUser = userRepository.save(user);
+        return updatedUser;
     }
 
     public List<User> findAll(){

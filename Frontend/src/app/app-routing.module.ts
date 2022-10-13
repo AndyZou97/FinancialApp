@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'goaldetails/:id', component: GoalDetailsComponent},
   {path: 'signin', component: SignInComponent},
   {path: 'signup', component: SignUpComponent},
-  {path: 'updateuser/:id', component: UpdateUserComponent},
+  {path: 'updateuser', component: UpdateUserComponent},
   {path: 'congratulations', component: CongratulationsComponent}
   
   

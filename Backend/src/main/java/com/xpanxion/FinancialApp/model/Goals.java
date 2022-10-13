@@ -2,10 +2,11 @@ package com.xpanxion.FinancialApp.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.*;
 import java.io.Serializable;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Entity
 @Table(name = "goals")
 public class Goals implements Serializable
