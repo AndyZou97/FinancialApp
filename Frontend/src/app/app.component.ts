@@ -13,12 +13,25 @@ export class AppComponent {
     private router:Router, private authenticationService: AuthenticationService) { }
 
 
+
+
   firstName = (localStorage.getItem("firstname")!);
+
+  getName():string{
+    return (localStorage.getItem("firstname")!);
+  }
+ 
+  getStatus():boolean{
+    if(localStorage.length == 0){
+      return false;
+    }
+    return true;
+  }
+
 
   logout(){
     this.authenticationService.clearCache();
-    this.router.navigate(['signin']);
-    location.reload();               
+    this.router.navigate(['signin']);             
     
   }
 

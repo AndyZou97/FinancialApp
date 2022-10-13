@@ -26,22 +26,27 @@
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="text" class="form-control" name="total coast" placeholder="Total Cost" [(ngModel)] ="goal.cost">
+                    <textarea type="text" class="form-control" name="goal description" placeholder="Goal Description" rows="4" [(ngModel)] ="goal.description"></textarea>
+                      <label class="form-label" for="form2Example17">Goal Description</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="number" class="form-control" name="total coast" placeholder="Total Cost" [(ngModel)] ="goal.cost">
                     <label class="form-label" for="form2Example27">Total Cost</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="text" class="form-control" name="Down Payment" placeholder="Down Payment" [(ngModel)] ="goal.downPayment">
+                    <input type="number" class="form-control" name="Down Payment" placeholder="Down Payment" [(ngModel)] ="goal.downPayment">
                     <label class="form-label" for="form2Example27">Down Payment</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="text" class="form-control" name="Months" placeholder="Months" [(ngModel)] ="goal.months">
+                    <input type="number" class="form-control" name="Months" placeholder="Months" [(ngModel)] ="goal.months">
                     <label class="form-label" for="form2Example27">Months</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="text" class="form-control" name="Interest Rate" placeholder="Interest Rate" [(ngModel)] ="goal.interest">
+                    <input type="number" class="form-control" name="Interest Rate" placeholder="Interest Rate" [(ngModel)] ="goal.interest">
                     <label class="form-label" for="form2Example27">Interest Rate</label>
                   </div>
 
