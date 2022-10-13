@@ -13,7 +13,6 @@ import { LearnMoreComponent } from './learn-more/learn-more.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { UpdateGoalComponent } from './update-goal/update-goal.component';
-import { ViewGoalComponent } from './view-goal/view-goal.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
@@ -44,7 +43,6 @@ import {MatMenuModule} from '@angular/material/menu';
     AboutUsComponent,
     ContactUsComponent,
     UpdateGoalComponent,
-    ViewGoalComponent,
     CreateUserComponent,
     UpdateUserComponent,
     UserDetailsComponent,
