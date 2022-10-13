@@ -13,6 +13,8 @@ export class GoalService {
 
   getGoalList(): Observable<Goal[]>{
     var currentUser = window.localStorage.getItem('id');
+    console.log((currentUser)!);
+    console.log("this is the current:" + currentUser);
     return this.httpClient.get<Goal[]>("http://localhost:8080/users/" + currentUser);
 
   }

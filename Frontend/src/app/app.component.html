@@ -13,6 +13,20 @@
     </div>
 </section>
 
+<section class = "drop" *ngIf="getStatus() == true">
+    <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{this.getName()}}
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="/goals">Goals</a>
+          <a class="dropdown-item" href="/updateuser">Update Profile</a>
+          <a class="dropdown-item" href = "/signin"(click)="logout()">Log Out</a>
+        </div>
+      </div>
+</section>
+
 <div class = "container">
 <router-outlet></router-outlet>
 </div>

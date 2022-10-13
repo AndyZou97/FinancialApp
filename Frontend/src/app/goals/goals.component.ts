@@ -40,13 +40,19 @@ export class GoalsComponent implements OnInit {
     private router:Router, private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
-    console.log(this.date.getDate());
     if(localStorage.length == 0){
       this.router.navigate(['signin']);
     }
     this.getGoals();
+    this.totalMonthlyPayment = parseFloat(this.totalMonthlyPayment.toFixed(2));
+    this.totalBalance = parseFloat(this.totalBalance.toFixed(2));
     console.log(this.goals);
   }
+
+  getName():string{
+    return (localStorage.getItem("firstname")!);
+  }
+ 
 
 
   private getGoals(){

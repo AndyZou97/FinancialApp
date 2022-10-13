@@ -15,6 +15,7 @@ export class UpdateUserComponent implements OnInit {
 
   user: User = new User();
 
+
   constructor(private userService: UserService,
     private router: Router) { }
 
@@ -23,6 +24,15 @@ export class UpdateUserComponent implements OnInit {
 
   saveUser(){
     this.userService.updateUser(this.user.id, this.user).subscribe( data =>{
+      var currentUser = window.localStorage.getItem('id');
+      console.log(currentUser);
+
+      localStorage.removeItem('firstname');
+      localStorage.removeItem('username');
+      localStorage.removeItem('user');
+      localStorage.setItem("user", JSON.stringify(this.user));
+      localStorage.setItem("username", JSON.stringify(this.user?.username));
+      localStorage.setItem("firstname", (this.user?.firstName));
       this.router.navigate(['/goals']);
     },
     
@@ -32,6 +42,7 @@ export class UpdateUserComponent implements OnInit {
   
   onSubmit(){
     this.saveUser();
+
 
   }
 }

@@ -9,6 +9,17 @@
 
 }
 
+.drop{
+	margin-left:90%
+}
+
+.btn-secondary{
+	background-color: black;
+	color: white;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
 body {
     background: #312450;
 }
