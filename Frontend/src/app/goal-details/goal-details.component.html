@@ -1,45 +1,51 @@
 <div class = "overlay"></div>
-<h3>View Goal Details</h3>
-<div>
-    <div>
-        <label><b>Id:</b></label>
-        {{goal.id}}
-    </div>
+<section  style="background-color: #003566;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <span class="h1 fw-bold mb-0">Goal Details</span>
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="assets\viewdetails.png"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
 
-    <div>
-        <label><b>Goal:</b></label>
-        {{goal.name}}
-    </div>
+                  
+                    
+                  
+                  <div class = "info">
+                  <div><label> Goal Name</label></div>
+                  {{goal.name}} <br> <br>
+                  <div><label> Goal Description</label></div>
+                  {{goal.description}} <br> <br>
+                  <div><label> Total Cost</label></div>
+                  {{"$" + goal.cost}} <br> <br>
+                  <div><label> Down Payment</label></div>
+                  {{"$" + goal.downPayment}} <br> <br>
+                  <div><label> Months</label></div>
+                  {{goal.months}} <br> <br>
+                  <div><label> Interest Rate (%)</label></div>                  
+                  {{goal.interest + "%"}} <br> <br>
+                  <div><label> Balance</label></div>                  
+                  {{"$" + goal.balance}} <br> <br>
+                  <div><label> Monthly Payment</label></div>                  
+                  {{"$" + goal.monthlyPayment}} <br> <br>
+                  
+                  <br><br>
 
-    <div>
-        <label><b>Cost:</b></label>
-        {{goal.cost}}
+                  <p><a href="goals"
+                    style="color: #cc425c;">Cancel</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div>
-        <label><b>Down Payment:</b></label>
-        {{goal.downPayment}}
-    
-    </div>    
-    
-    <div>
-        <label><b>Interest:</b></label>
-        {{goal.interest}}
-    </div>
+  </div>
+</section>
 
-    <div>
-        <label><b>Months:</b></label>
-        {{goal.months}}
-    </div>
 
-    <div>
-        <label><b>Balance:</b></label>
-        {{goal.balance}}
-    </div>
-
-    <div>
-        <label><b>Description:</b></label>
-        {{goal.description}}
-    </div>
-
-</div>
