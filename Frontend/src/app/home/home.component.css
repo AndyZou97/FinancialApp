@@ -1,30 +1,199 @@
-.column {
-  
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-        padding-bottom: 20px;
-        margin-bottom: 150px;
+/********** common setting **********/
+.overlay{
+    opacity:0.8;
+    background-color:#32557e;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:-1;
+    border: #6b002d;
+    border-width: 50px;
 }
-.center {
+
+body{
+    border: #6b002d;
+    border-width: 30px;
+    border-radius: 20px;
+}
+
+
+h2 {
+    font-size: 2.8rem !important;
+    font-weight: 700;
+}
+
+img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    max-width: 100%;
 }
-.home h1{
-    font-family: 'Permanent Marker', cursive;
-    font-size: 60px;
+
+a,
+button {
+    cursor: pointer;
 }
-.jumbotron{
-    background-color: #0F3460;
+
+.jumbotron {
+    margin-bottom: 0 !important;
+    border: #6b002d;
 }
-.jumbotron h1{
-    color: aliceblue;
+
+.atlas-cta {
+    border-radius: 22px !important;
+    padding: 12px 30px !important;
+    font-weight: 700;
+    transition: .3s ease-in-out !important;
 }
-.jumbotron h3{
-    color: aliceblue;
+
+.atlas-cta:hover {
+    text-decoration: none;
+    transform: translateY(-5px);
 }
-.jumbotron p{
-    color: aliceblue;
+
+#text001, #text002, #text003, #text004, #text005, #text006 {
+    color: #ffffff;
+}
+
+.doublogo {
+
+    width: fit-content;
+    height: fit-content;
+    padding-left: 100px;
+
+  
+}
+
+.atlas-cta-wide {
+    width: 100%;
+}
+
+.cta-green {
+    background: #6b002d;
+    color: white;
+}
+
+.cta-green:hover {
+    color: #ffffff;
+    background: #121a2e;
+}
+
+.cta-blue {
+    background: #192440;
+    color: #ffffff;
+}
+
+.cta-blue:hover {
+    color: #ffffff;
+    background: #121a2e;
+}
+
+.cta-ghost {
+    border: 2px solid #192440 !important;
+    color: #192440;
+}
+
+.cta-ghost:hover {
+    color: #ffffff;
+    background: #121a2e;
+}
+
+#banner {
+    background-size: cover;
+}
+
+/********** banner **********/
+#banner header {
+    overflow: hidden;
+}
+
+#banner header img {
+    max-width: 80px;
+}
+
+/********** feature (skew background) **********/
+.feature img {
+    width: 100%;
+    max-width: 480px;
+}
+
+#feature-first {
+    background: linear-gradient(168deg, #ffffff 55%, white 0);
+}
+
+#feature-last {
+    background: white;
+    border-color: #6b002d;
+    padding-bottom: 10px;
+
+}
+
+/********** price table **********/
+#price-table {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+#price-table__premium {
+    background: #192440;
+    color: #ffffff;
+}
+
+#price-table ul li {
+    padding: 5px 0;
+}
+
+/********** contact **********/
+#contact {
+    background-size: cover;
+}
+
+#contact ul li {
+    padding: 3px 0;
+}
+
+#contact form {
+    color: #00FFAD;
+}
+
+#contact form input,
+#contact form textarea {
+    background: transparent;
+    border: 1px solid #00FFAD;
+    color: #ffffff;
+}
+
+/********** copyright **********/
+#copyright {
+    background: #192440;
+    padding: 2rem 3rem;
+}
+
+#copyright #social-media a {
+    width: 40px;
+    height: 40px;
+    border-radius: 99%;
+    background: #ffffff;
+    transition: .4s ease;
+}
+
+#copyright #social-media a i {
+    color: #192440;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+
+#copyright #social-media a:hover {
+    background: #00FFAD;
+}
+
+#copyright #social-media a:hover i {
+    color: #ffffff;
+}
+
+/********** RWD **********/
+@media (max-width: 575px) {
+    #banner h1 {
+        font-size: 3.6rem;
+    }
 }

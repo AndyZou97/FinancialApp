@@ -1,99 +1,96 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-    </style>
- <link rel="stylesheet" href="home.component.css">
- <div class="home">
-    <h1 style="text-align:center"[style]="" >Welcome To Doubloom</h1>
+<html lang="zh-TW">
+  
+<body>
+  <div class="overlay"></div>
+  <div>
+    <img src="assets\doubloonlogo.png" alt="logo" class="doublogo">
 </div>
-<div id="img-coin">
-<img src="https://us.123rf.com/450wm/oixxo/oixxo1901/oixxo190100021/114340337-golden-game-pirate-coin-icon-with-cute-skull.jpg?ver=6"
-  class="center"  alt="" srcset="">
-</div>
-    <div class="Start">
-    <button class="btn btn-primary btn-lg"  (click)="goToSignIn()"> Get Started</button>
-</div>
-<hr>
-<div class="row">
-    <div class="column">
-<div class="card" style="width: 18rem;">
-    <img src="assets\Img\Integrity.webp" class="card-img-top" alt="#">
-    <div class="card-body">
-        <h3><strong><u>Integrity</u></strong></h3>
-        <p class="card-text"style="font-size:140%;">"To take a stand for all investors, to treat them fairly, and to give them the best chance
-            for investment success."</p>
-    </div>
-</div>
-<div class="card" style="width: 18rem;">
-    <img src="assets\Img\Service.jpg" class="card-img-top" alt="">
-    <div class="card-body">
-        <h3><strong><u>Service</u></strong></h3>
-        <p class="card-text"style="font-size:140%;">"We deliver an unparalleled standard of excellence in everything we do, staying focused on the biggest opportunities to be meaningful to our customers."
-</div>
-<div class="card" style="width: 18rem;">
-    <img src="assets\Img\dependable.jpg" class="card-img-top" alt="#">
-    <div class="card-body">
-        <h3><strong><u>Dependability</u></strong></h3>
-        <p class="card-text"style="font-size:140%;">  "We’re driven by our commitment to deliver exceptional products, services and experiences to our customers."</p>
-        </div>
-</div>
-    </div>
-    <div class="column">
-<div class="card" style="width: 18rem;">
-    <img src="assets\Img\flexablity.jfif" class="card-img-top" alt="#">
-    <div class="card-body">
-        <h3><strong><u>Flexibility</u></strong></h3>
-        <p class="card-text"style="font-size:140%;">"Growth is not by chance. It’s the result of a forever quest to improve through lifelong learning. *Fun included."</p>
-    </div>
-        </div>
-    <div class="card" style="width: 18rem;">
-        <img src="assets\Img\loyalty.jpe" class="card-img-top" alt="#">
-        <div class="card-body">
-            <h3><strong><u>Loyalty</u></strong></h3>
-            <p class="card-text"style="font-size:140%;">"We earn the trust of our customers, employees, and extended family through transparency, security, compliance, privacy, and performance. We deliver the industry’s most trusted infrastructure."</p>
-        </div>
-            </div>
-        <div class="card" style="width: 18rem;">
-            <img src="assets\Img\Accountability.jpg" class="card-img-top" alt="#">
-            <div class="card-body">
-                <h3><strong><u>Accountability</u></strong></h3>
-                <p class="card-text"style="font-size:140%;">"Each of us is responsible for our words, our actions, and our results."</p>
-            </div>
+    <!-- banner -->
+    <div class="jumbotron jumbotron-fluid" id="banner" style="background-image: url(src\assets\Img\pexels-daniyal-ghanavati-170172.jpg);">
+        <div class="container text-center text-md-left">
+            <header>
+                <div class="row justify-content-between">
                 </div>
+            </header>
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-black font-weight-bold my-5">
+            The easy way<br>
+            to manage your goals.
+          
+            </h1>
+            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-black my-4">
+              The free financial tool, for everyone.
+                <br> Add, plan, and track your financial goals and take the guesswork out of your budget. 
+            </p>
+            <a href="/signin" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-green">Sign Up</a>
+        </div>
     </div>
-</div>
-            <hr>
-            <div class="sales-pitch">
-                <div class="jumbotron">
-                    <h1 class="display-4">Mission Statement</h1>
-                    <p class="lead">Become essential to our customers by providing differentiated products and services to help them achieve their aspirations.
-                    </p>
-                    <hr class="my-4">
-                    <h3>Our Vision</h3>
-                    <p>Provide the world’s best customer experience every day.</p>
-                    <p class="lead">
-                      <button class="btn btn-primary btn-lg" (click)="goToAboutUs()">About Us</button>
-                    </p>
-                  </div>
+    <!-- three-blcok -->
+    <div class="container my-5 py-2">
+        <h2 class="text-center font-weight-bold my-5">Smartest Way to Manage Your Goals</h2>
+        <div class="row">
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="assets\goalslaptop.png" alt="Anti-spam" class="mx-auto">
+                <h4 id="text001">View Goals</h4>
+                <p id="text002">Easy to read visuals for budget allocation</p>
             </div>
-            <hr>
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="assets\Img\happy-family.webp" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item active" >
-                    <img src="assets\Img\shopping.jpg" class="d-block w-50" alt="...">
-                  </div>
-                  <div class="carousel-item active"data-bs-interval="1000">
-                    <img src="assets\Img\Mansion-Mewah-di-Israel.webp" class="d-block w-100" alt="...">
-                  </div>
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="assets\easysignup.png" alt="Phishing Detect" class="mx-auto">
+                <h4 id="text003">Easy Sign-Up</h4>
+                <p id="text004">Enter your name, email, and choose a username and you're in!</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="assets\UpdateGoalsPic.png" alt="Smart Scan" class="mx-auto">
+                <h4 id="text005">Simple Updates</h4>
+                <p id="text006">Change the track of your goals in one-easy step</p>
+            </div>
+        </div>
+    </div>
+    <!-- feature (skew background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold">Save More, Spend Smarter</h2>
+                    <p class="my-4">See where your money is going and discover places to save. 
+                    </p>
+                    <a href="/learnmore" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="assets\piggy.png" alt="Take a look inside" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- feature (green background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">Budget the Easy Way</h2>
+                    <p class="my-4">
+                      Always know where you stand and what you have left to spend.
+                    </p>
+                    <a href="/learnmore" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="assets\budgetclip.png" alt="Safe and reliable" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    
+
+    <!-- AOS -->
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+      });
+    </script>
+</body>
+
+</html>
