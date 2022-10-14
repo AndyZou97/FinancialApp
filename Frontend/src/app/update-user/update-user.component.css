@@ -13,3 +13,8 @@
 .img-fluid{
     padding-top: 25%;
  }
+
+ .pass{
+    color: red;
+    font-size: 12px;
+}
