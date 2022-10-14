@@ -106,10 +106,4 @@ export class GoalsComponent implements OnInit {
     this.router.navigate(['addgoal'])
   }
 
-  logout(){
-    this.authenticationService.clearCache();
-    this.router.navigate(['signin'])               
-    
-  }
-
 }

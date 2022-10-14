@@ -18,6 +18,8 @@ export class SignUpComponent implements OnInit {
   constructor(private userService: UserService,
     private router: Router) { }
 
+
+  
   ngOnInit(): void {
   }
 
@@ -31,7 +33,32 @@ export class SignUpComponent implements OnInit {
 
   
   onSubmit(){
-    this.saveUser();
+    if(!this.passwordTooShort() && !this.passwordNoUpperAndLower() &&!this.passwordNoSpecialChar()){
 
+      this.saveUser();
+    
+    }
+    
+
+  }
+
+  passwordTooShort(): boolean{
+    if(this.user.password.length < 7){
+      return true;
+    }
+    else{
+      return false;
+    
+    }
+  }
+
+  passwordNoSpecialChar(): boolean{
+    var re = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    return !re.test(this.user.password)
+  }
+
+  passwordNoUpperAndLower(): boolean{
+    var re = /([A-Z].*[a-z]|[a-z].*[A-Z])/;
+    return !re.test(this.user.password)
   }
 }

@@ -39,10 +39,33 @@ export class UpdateUserComponent implements OnInit {
     error => console.log(error));
   }
 
+  passwordTooShort(): boolean{
+    if(this.user.password.length < 7){
+      return true;
+    }
+    else{
+      return false;
+    
+    }
+  }
+
+  passwordNoSpecialChar(): boolean{
+    var re = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    return !re.test(this.user.password)
+  }
+
+  passwordNoUpperAndLower(): boolean{
+    var re = /([A-Z].*[a-z]|[a-z].*[A-Z])/;
+    return !re.test(this.user.password)
+  }
+
   
   onSubmit(){
-    this.saveUser();
+    if(!this.passwordTooShort() && !this.passwordNoUpperAndLower() &&!this.passwordNoSpecialChar()){
 
+      this.saveUser();
+    
+    }
 
   }
 }
