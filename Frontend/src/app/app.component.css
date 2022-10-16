@@ -5,8 +5,7 @@
 	height: 100%;
 	max-width: 1000px; 
 	max-height: 1000px; 
-
-
+	position: relative;
 }
 
 .drop{
@@ -28,6 +27,139 @@ img {
 	width: 260px;
 	margin: -40px 0px 50px -40px;
 }
+
+.footer-container {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+.footer {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Facebook */
+.fa-facebook-official{
+	color: #3b5998;
+	background-color: rgb(255, 255, 255);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fa-facebook-official:hover{
+	opacity: .9;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+
+.fa-facebook-official:active{
+	opacity: .5;
+}
+
+/* Twitter */
+.fa-twitter{
+	color: #1DA1F2;
+	background-color: rgb(255, 255, 255);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fa-twitter:hover{
+	opacity: .9;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+
+.fa-twitter:active{
+	opacity: .5;
+}
+
+/* Linkedin */
+.fa-linkedin-square{
+	background-color: rgb(255, 255, 255);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fa-linkedin-square:hover{
+	opacity: .9;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+
+.fa-linkedin-square:active{
+	opacity: .5;
+}
+
+/* Github */
+.fa-github{
+	color: #6e5494;
+	background-color: rgb(255, 255, 255);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fa-github:hover{
+	opacity: .9;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+
+.fa-github:active{
+	opacity: .5;
+}
+
+/* Instagram */
+.fa-instagram{
+	color: #fbad50;
+	background-color: rgb(255, 255, 255);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fa-instagram:hover{
+	opacity: .9;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+
+.fa-instagram:active{
+	opacity: .5;
+}
+
 
     body.is-preload *, body.is-preload *:before, body.is-preload *:after {
         -moz-animation: none !important;
@@ -280,14 +412,14 @@ img {
 			}
 
 			#sidebar nav a:before {
-				background: #3c2c62;
+				background: #003063;
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #003566, #CCA000);
-				background-image: -webkit-linear-gradient(to right, #003566, #CCA000);
-				background-image: -ms-linear-gradient(to right, #003566, #CCA000);
-				background-image: linear-gradient(to right, #003566, #CCA000);
+				background-image: -moz-linear-gradient(to right, #3b5998, #FFD700);
+				background-image: -webkit-linear-gradient(to right, #3b5998, #FFD700);
+				background-image: -ms-linear-gradient(to right, #3b5998, #FFD700);
+				background-image: linear-gradient(to right, #3b5998, #FFD700);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -318,6 +450,9 @@ img {
 			transform: translateY(2em);
 			opacity: 0;
 		}
+
+
+
 
 		@media screen and (max-width: 1280px) {
 

@@ -1,36 +1,62 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <section id="sidebar">
 
 
-    <div class="inner">
-        <nav>
-            <ul>
-                <img src="\assets\Doubloon (2).gif" alt="logo-gif">
 
-                <li><a routerLink="home" routerLinkActive="active">home</a></li>
-                <li><a routerLink="goals" routerLinkActive="active">goals</a></li>
-                <li><a routerLink="learnmore" routerLinkActive="active">learn more</a></li>
-                <li><a routerLink="aboutus" routerLinkActive="active">about us</a></li>
-                <li><a routerLink="contactus" routerLinkActive="active">contact us</a></li>
-                
-            </ul>
-        </nav>
+  <div class="inner">
+    <nav>
+      <ul>
+        <img src="\assets\Doubloon (2).gif" alt="logo-gif">
+
+        <li><a routerLink="home" routerLinkActive="active">home</a></li>
+        <li><a routerLink="goals" routerLinkActive="active">goals</a></li>
+        <li><a routerLink="learnmore" routerLinkActive="active">learn more</a></li>
+        <li><a routerLink="aboutus" routerLinkActive="active">about us</a></li>
+        <li><a routerLink="contactus" routerLinkActive="active">contact us</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</section>
+
+
+
+
+<section class="drop" *ngIf="getStatus() == true">
+  <div class="dropdown show">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      {{this.getName()}}
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="/goals">Goals</a>
+      <a class="dropdown-item" href="/updateuser">Update Profile</a>
+      <a class="dropdown-item" href="/signin" (click)="logout()">Log Out</a>
     </div>
+  </div>
 </section>
 
-<section class = "drop" *ngIf="getStatus() == true">
-    <div class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{this.getName()}}
-        </a>
-      
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="/goals">Goals</a>
-          <a class="dropdown-item" href="/updateuser">Update Profile</a>
-          <a class="dropdown-item" href = "/signin"(click)="logout()">Log Out</a>
-        </div>
-      </div>
-</section>
+<div class="container">
+  <router-outlet></router-outlet>
 
-<div class = "container">
-<router-outlet></router-outlet>
+  <div class="footer-container">
+    
+    <section class="footer">
+
+      <a href="https://github.com/AndyZou97/FinancialApp" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+      <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official fa-2x"></i></a>
+      <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+
+    </section>
+
+    <h4>© 2022 Copyright: Doubloon.com</h4>
+
+  </div>
+
+
 </div>

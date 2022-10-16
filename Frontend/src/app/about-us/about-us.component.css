@@ -1,129 +1,161 @@
 .overlay{
-    opacity:1;
-    background-color:#6b002d;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:-1;
+  opacity:1;
+  background-color:#6b002d;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:-1;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-  }
-  
-  html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .column {
-    float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
-    margin: 8px;
-    background-color: #720D38;
-    color: white;
-  }
-  
-  .about-section {
-    padding: 30px;
-    text-align: center;
-    background-color: #720D38;
-    color: white;
-    border: white;
-    border-style:groove;
-    border-radius: 10px;
-  }
-
-  .about-section > p {
-    font-size: 20px;
-  }
-  
-  .container {
-    padding: 0 16px;
-    padding-top: 10px;
-    display: inline-block;
-  }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .title {
-    color: rgb(192, 192, 192);
-  }
-
-  .pictures {
-    height: 350px;
-  }
-
-  #kdawg {
-    height: 366px;
-  }
-  
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #0072b1;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 20px;
-    border-radius: 5px;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
-
-  .row2{
-    align-items: center;
-  }
-
-  h2{
-    font-size: 28px;
-    text-align: center;
-  }
-  .ourcrew > h2{
-    color: white;
-    font-size: 50px;
-  }
-  i{
-    font-size:20px;
-  }
-
-  h1{
-    color:white;
-    text-align: center; 
-    font-size: 80px;
-    font-family: 'Cairo', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
-  p{
-    font-family: 'Rajdhani', sans-serif;
-  }    
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  margin: 8px;
+  background-color: #720D38;
+  color: white;
+  height: 700px;  
+  position: relative;
+
+}
+
+.about-section {
+  padding: 30px;
+  text-align: center;
+  background-color: #720D38;
+  color: white;
+  border: white;
+  border-style:groove;
+  border-radius: 10px;
+}
+
+.about-section > p {
+  font-size: 20px;
+}
+
+.container {
+  padding: 0 16px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.container-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  padding-bottom: 5px;
+}
 
 
 
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: rgb(192, 192, 192);
+}
+
+.pictures {
+  height: 350px;
+}
+
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #0072b1;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  opacity: .8;
+}
+
+.button:active {
+  opacity: .5;
+}
+
+.row2{
+  align-items: center;
+}
+
+h2{
+  font-size: 28px;
+  text-align: center;
+}
+.ourcrew > h2{
+  color: white;
+  font-size: 50px;
+}
+i{
+  font-size:20px;
+}
+
+h1{
+  color:white;
+  text-align: center; 
+  font-size: 80px;
+  font-family: 'Cairo', sans-serif;
+}
+p{
+  font-family: 'Rajdhani', sans-serif;
+}    
+
+
+
+a img:last-child {
+  display: none;  
+}
+
+a:hover img:last-child {
+  -webkit-transition: 2s ease-in 1000ms;
+  -moz-transition: 2s ease-in 1000ms;
+  -o-transition: 2s ease-in 1000ms;
+  transition: 2s ease-in 1000ms;
+  display: block;  
+}
+
+a:hover img:first-child {
+  display: none;  
+}
+
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
   }
+}
