@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './authentication.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +12,10 @@ import { AuthenticationService } from './authentication.service';
 })
 export class AppComponent {
   constructor(
-    private router:Router, private authenticationService: AuthenticationService) { }
-
-
-
+    private router:Router, 
+    private authenticationService: AuthenticationService, 
+    public dialog: MatDialog
+    ) { }
 
   firstName = (localStorage.getItem("firstname")!);
 
@@ -36,4 +38,8 @@ export class AppComponent {
   }
 
   title = 'Doubloon';
+
+  openDialog() {
+    this.dialog.open(DialogExampleComponent);
+  }
 }
