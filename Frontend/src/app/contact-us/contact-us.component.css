@@ -73,7 +73,15 @@ h2{
 
   .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #483686 !important;
-    border-color: #ffffff;
+    border-color: #fffffff1;
+}
+
+li {
+    padding: 10px;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.733);
 }
 
 

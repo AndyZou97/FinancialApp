@@ -64,6 +64,19 @@ button {
   
 }
 
+.doubloon {
+    padding-right: 80px;
+}
+
+.save-more{
+    margin-top: 130px;
+}
+
+.budget-easy{
+    margin-top: 80px;
+}
+
+
 .atlas-cta-wide {
     width: 100%;
 }
