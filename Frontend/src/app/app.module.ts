@@ -27,7 +27,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 
 @NgModule({
@@ -47,6 +48,9 @@ import {MatMenuModule} from '@angular/material/menu';
     UpdateUserComponent,
     UserDetailsComponent,
     GoalDetailsComponent,
+    DialogExampleComponent,
+
+
 
 
   ],
@@ -61,10 +65,12 @@ import {MatMenuModule} from '@angular/material/menu';
     MatExpansionModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogExampleComponent]
 })
 export class AppModule { }

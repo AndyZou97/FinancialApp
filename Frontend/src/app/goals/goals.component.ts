@@ -4,6 +4,8 @@ import { ChartType } from 'angular-google-charts';
 import { AuthenticationService } from '../authentication.service';
 import { Goal } from '../goal';
 import { GoalService } from '../goal.service';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { DialogExampleComponent } from '../dialog-example/dialog-example.component';
 
 
 
@@ -36,8 +38,12 @@ export class GoalsComponent implements OnInit {
   totalBalance = 0;
 
 
-  constructor(private goalService:GoalService,
-    private router:Router, private authenticationService: AuthenticationService) { }
+  constructor(
+    private goalService:GoalService,
+    private router:Router, 
+    private authenticationService: AuthenticationService,
+    public dialog: MatDialog
+    ) { }
 
   ngOnInit(): void {
     if(localStorage.length == 0){
@@ -83,6 +89,7 @@ export class GoalsComponent implements OnInit {
 
   }
   deleteGoal(id:number){
+
     this.goalService.deleteGoal(id).subscribe(data =>{
       this.getGoals();
     })
@@ -106,4 +113,50 @@ export class GoalsComponent implements OnInit {
     this.router.navigate(['addgoal'])
   }
 
+
+
+  openDialog(id: number) {
+    let dialogRef = this.dialog.open(DialogExampleComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+
+      if(result == 'true'){
+        this.goalService.deleteGoal(id).subscribe(data =>{
+          this.getGoals();
+        })
+      }
+      else if (result == 'false') {
+        this.dialog.closeAll();
+      }
+      else{
+        this.dialog.closeAll();
+      }
+    })
+
+    
+  }
+
+  // openDialog(id: number) {
+  //   let dialogRef = this.dialog.open(DialogExampleComponent);
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log(`Dialog result: ${result}`);
+
+  //     if(result == `false`){
+  //       this.goalService.deleteGoal(id).subscribe(data =>{
+  //         this.getGoals();
+  //       })
+  //     }
+  //     else if (result == `false`) {
+  //       this.dialog.closeAll();
+  //     }
+  //     else{
+  //       this.dialog.closeAll();
+  //     }
+  //   })
+
+    
+  // }
+
 }
+
