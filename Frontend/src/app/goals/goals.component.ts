@@ -77,7 +77,7 @@ export class GoalsComponent implements OnInit {
           this.goals[row].name,
           this.goals[row].balance,
         ]);
-        this.totalMonthlyPayment += this.goals[row].monthlyPayment;
+        this.totalMonthlyPayment += parseFloat(this.goals[row].monthlyPayment.toFixed(2));
         this.totalBalance += this.goals[row].balance;
 
       }
@@ -135,28 +135,6 @@ export class GoalsComponent implements OnInit {
 
     
   }
-
-  // openDialog(id: number) {
-  //   let dialogRef = this.dialog.open(DialogExampleComponent);
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log(`Dialog result: ${result}`);
-
-  //     if(result == `false`){
-  //       this.goalService.deleteGoal(id).subscribe(data =>{
-  //         this.getGoals();
-  //       })
-  //     }
-  //     else if (result == `false`) {
-  //       this.dialog.closeAll();
-  //     }
-  //     else{
-  //       this.dialog.closeAll();
-  //     }
-  //   })
-
-    
-  // }
 
 }
 
